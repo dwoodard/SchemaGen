@@ -25,7 +25,7 @@ class Lexer extends AbstractLexer
     {
         return [
             '\s+',                   // Match whitespace
-            '.',                     // Match any character
+            // Removed '.' pattern to fix regex error
         ];
     }
 
