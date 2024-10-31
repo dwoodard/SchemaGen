@@ -7,7 +7,7 @@ SchemaGen is a package designed to parse a custom schema syntax and generate Lar
 Install via Composer:
 
 ```bash
-composer require schemagen/schemagen
+composer require dwoodard/schemagen
 ```
 
 ```
