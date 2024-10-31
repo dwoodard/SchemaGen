@@ -11,11 +11,11 @@ class Lexer extends AbstractLexer
         return [
             '@@?\s*\w+',
             '[=~?$%^]+',
-            '[\w\\\\]+',
+            '[\\w\\\\]+',          // Escaped backslashes
             '"[^"]*"',
             "'[^']*'",
-            '\([^)]*\)',
-            '\[[^\]]*\]',
+            '\\([^)]*\\)',         // Escaped parentheses
+            '\\[[^\\]]*\\]',       // Escaped brackets
             '->',
         ];
     }
@@ -25,7 +25,7 @@ class Lexer extends AbstractLexer
     {
         return [
             '\s+',                   // Match whitespace
-            // Removed '.' pattern to fix regex error
+            '(.)',                   // Catch any other character
         ];
     }
 
