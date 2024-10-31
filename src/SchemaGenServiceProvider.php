@@ -3,16 +3,19 @@
 namespace SchemaGen;
 
 use Illuminate\Support\ServiceProvider;
+use SchemaGen\Commands\GenerateCodeCommand;
 
 class SchemaGenServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        // Register bindings or services here if needed
+        $this->commands([
+            GenerateCodeCommand::class,
+        ]);
     }
 
     public function boot()
     {
-        // Set up resources, routes, views, or other services
+        // Any additional boot logic
     }
 }
