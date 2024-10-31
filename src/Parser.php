@@ -15,7 +15,7 @@ class Parser
 
         $this->tokens = [];
         while (($token = $this->lexer->moveNext()) !== null) {
-            $this->tokens[] = $this->lexer->lookahead;
+            $this->tokens[] = $token;
         }
 
         $this->position = 0;

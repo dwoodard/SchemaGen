@@ -1,5 +1,5 @@
 {
-    "name": "schemagen/schemagen",
+    "name": "dwoodard/schemagen",
     "description": "A package to parse custom schema syntax and generate Laravel and Vue files.",
     "type": "library",
     "license": "MIT",
