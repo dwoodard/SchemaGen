@@ -64,4 +64,21 @@ $ deleting: logDeletion
 
 ^ view: checkViewPermission
 ^ update: checkUpdatePermission
+
+---
+
+@Component DogProfile
+
+- name: string, required
+- breed: string
+= formattedAge -> format age as "2 years, 3 months"
+= isPuppyStatus -> return "Puppy" if age < 1, else "Adult"
+
+$ showDetails: boolean -> initial value: false
+
+~ toggleDetails -> toggles showDetails
+~ fetchDogInfo -> fetches additional dog data from API
+
+! dogSelected: emits event when dog is selected
+
 ```
