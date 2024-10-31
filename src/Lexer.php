@@ -8,18 +8,18 @@ class Lexer extends AbstractLexer
 {
     protected function getCatchablePatterns()
     {
-        // Adjust patterns to avoid regex modifier issues
         return [
-            '@@?\s*\w+',            // Match @ or @@ followed by whitespace and word characters
-            '[=~?$%^]+',             // Match one or more special characters
-            '[\w\\\\]+',             // Match word characters and backslashes
-            '"[^"]*"',               // Match content within double quotes
-            "'[^']*'",               // Match content within single quotes
-            '\([^)]*\)',             // Match content within parentheses
-            '\[[^\]]*\]',            // Match content within brackets
-            '->',                    // Match arrow notation
+            '@@?\s*\w+',
+            '[=~?$%^]+',
+            '[\w\\\\]+',
+            '"[^"]*"',
+            "'[^']*'",
+            '\([^)]*\)',
+            '\[[^\]]*\]',
+            '->',
         ];
     }
+
 
     protected function getNonCatchablePatterns()
     {
