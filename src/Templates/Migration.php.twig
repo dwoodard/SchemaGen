@@ -1,0 +1,24 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Create{{ model.name }}Table extends Migration
+{
+    public function up()
+    {
+        Schema::create('{{ model.name|lower }}s', function (Blueprint $table) {
+            $table->id();
+            {% for property in model.properties %}
+            $table->{{ property.definition }};
+            {% endfor %}
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('{{ model.name|lower }}s');
+    }
+}

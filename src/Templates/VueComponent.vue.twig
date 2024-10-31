@@ -1,0 +1,44 @@
+<template>
+  <div>
+    <!-- Component template -->
+  </div>
+</template>
+
+<script>
+export default {
+  name: '{{ component.name }}',
+  props: {
+    {% for prop in component.properties %}
+    {{ prop.name }}: {
+      type: String,
+      required: true,
+    },
+    {% endfor %}
+  },
+  data() {
+    return {
+      {% for data in component.data %}
+      {{ data.name }}: {{ data.definition }},
+      {% endfor %}
+    };
+  },
+  computed: {
+    {% for computed in component.computed_properties %}
+    {{ computed.name }}() {
+      {{ computed.definition }}
+    },
+    {% endfor %}
+  },
+  methods: {
+    {% for method in component.methods %}
+    {{ method.name }}() {
+      {{ method.definition }}
+    },
+    {% endfor %}
+  },
+};
+</script>
+
+<style scoped>
+/* Component styles */
+</style>

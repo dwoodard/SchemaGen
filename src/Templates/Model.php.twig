@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{ model.name }} extends Model
+{
+    protected $fillable = [
+        {% for property in model.properties %}
+        '{{ property.name }}',
+        {% endfor %}
+    ];
+
+    {% for computed in model.computed_properties %}
+    public function get{{ computed.name|capitalize }}Attribute()
+    {
+        {{ computed.definition|raw }}
+    }
+    {% endfor %}
+}
