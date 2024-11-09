@@ -12,16 +12,20 @@ composer require dwoodard/schemagen
 
 ```
 Summary of Symbols for Extended Laravel Features
-@ - Model declaration
-- - Standard properties
-= - Computed properties
-> - Relationships (use with(...) for filtered relationships)
-? - Scopes
-~ - Accessors and Mutators
-% - Casts
-! - Validations
-$ - Observers
-^ - Policies
+@       - Model declaration
+-       - Standard properties
+-&      - placeholders for AI-generated content
+=       - Computed properties
+>       - Relationships (use with(...) for filtered relationships)
+?       - Scopes
+~       - Accessors and Mutators
+%       - Casts
+!       - Validations
+$       - Observers
+^       - Policies
+@Job    - Specifies background tasks to be run asynchronously
+@Event  - Defines events that trigger real-time updates or actions
+
 ```
 
 Usage
