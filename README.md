@@ -29,10 +29,10 @@ Summary of Symbols for Extended Laravel Features
 ```
 
 Usage
-create the schema file call schema.lsd (Laravel Schema Definition) with the following command:
+create the schema file call schema.lsd (Laravel Schema Definitions) with the following command:
 ```bash
 # If no schema file is specified, `schema.lsd` will be used as the default.
-php artisan generate:schema [schema.lsd]
+php artisan generate:schema [database/schemas/schema.lsd]
 ```
 
 ## Example Schema
